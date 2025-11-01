@@ -6,10 +6,11 @@ import userRouter from "./routes/userRoutes/userRoutes";
 import addressRouter from "./routes/addressRoutes/addressRoutes";
 import categoryRouter from "./routes/categoryRoutes/categoryRoutes";
 import productRouter from "./routes/productRoutes/productRoutes";
-
+import cors from "cors";
 
 const app : express.Application = express();
 dotenv.config({ path: "./.env" });
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
